@@ -17,7 +17,7 @@ def login():
             login_user(user)
             if user.role == 'admin':
                 return redirect(url_for('main.admin_dashboard'))
-            return redirect(url_for('main.dashboard'))
+            return redirect(url_for('main.admin_dashboard'))
 
         flash('Invalid username or password')
     return render_template('auth/login.html')
